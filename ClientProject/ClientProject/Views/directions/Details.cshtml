@@ -1,0 +1,34 @@
+﻿@model ClientProject.directions
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>directions</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.direction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
